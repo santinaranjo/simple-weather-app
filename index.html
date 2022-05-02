@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Weather App</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -15,10 +19,11 @@
     </header>
     <main class="main">
         <section class="main__input">
-            <input type="text" class="main__input--text" value="Escribe una ubicación">
-            <input type="button" value="Buscar">
+            <input type="text" class="main__input--text" placeholder="Escribe una ubicación">
+            <input type="button" class="main__input--button" value="Buscar">
         </section>
         <section class="main__results"></section>
+        <script src="./main.js"></script>
     </main>
 </body>
 </html>
