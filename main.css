@@ -3,12 +3,112 @@
     --main-font: 'Poppins', sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+body {
+    width: 100%;
+}
+
+.header, .main__input, .main__results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    margin: 15px 0 0 10px;
+}
+
 .header__img img {
     width: 50px;
     height: 50px;
+    margin-right: 10px;
 }
 
 .header__h1 {
     color: var(--main-color);
+    font-size: 1.4rem;
+}
+
+.main__input {
+    margin: 30px;
+    flex-direction: column;
+}
+
+.main__input--text:focus::placeholder {
+    color: transparent;
+}
+
+.main__input--text {
+    width: 270px;
+    font-size: 1.3rem;
+    text-align: center;
+    outline: none;
+    border: 5px solid var(--main-color);
+    border-radius: 10px;
+    padding: 7px;
     font-family: var(--main-font);
+} 
+
+.main__input--button {
+    margin-top: 15px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    border: 5px solid var(--main-color);
+    border-radius: 10px;
+    padding: 7px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+.main__results {
+    flex-direction: column;
+}
+
+.card__container {
+    width: 290px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: lightgray;
+    color: black;
+}
+
+.card__title--country {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+    bottom: 5px;
+}
+
+.card__temp {
+    font-size: 3rem;
+    margin: 15px 0 0 7px;
+}
+
+.card__img {
+    width: 80px;
+    height: 80px;
+    align-self: center;
+}
+
+.card__weather {
+    align-self: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.8rem;
 }
