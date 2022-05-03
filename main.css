@@ -45,16 +45,27 @@ body {
     color: transparent;
 }
 
-.main__input--text {
+.main__input--text, .main__input--text_error {
     width: 270px;
     font-size: 1.3rem;
     text-align: center;
     outline: none;
-    border: 5px solid var(--main-color);
     border-radius: 10px;
     padding: 7px;
     font-family: var(--main-font);
 } 
+
+.main__input--text {
+    border: 5px solid var(--main-color);
+}
+
+.main__input--text_error::placeholder {
+    color: red;
+}
+
+.main__input--text_error {
+    border: 5px solid red;
+}
 
 .main__input--button {
     margin-top: 15px;
