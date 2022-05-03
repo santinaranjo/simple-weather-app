@@ -7,6 +7,9 @@ async function createCard() {
     const response = await getData(inputField);
 
     if (response) {
+        const cardCount = document.querySelectorAll(".card__container");
+        console.log(cardCount.length);
+        console.log(cardCount[0])
         const weatherData = response.json()
             .then(
                 function (data) {
@@ -23,14 +26,21 @@ async function createCard() {
                     
                     cardContainer.className = "card__container";
                     cardContainer.innerHTML = cardContent;
-                    results.append(cardContainer);
+
+                    if (cardCount.length === 3) {
+                        results.removeChild(cardCount[2]);
+                        results.prepend(cardContainer);
+                    } else {
+                        results.prepend(cardContainer);
+                    }
+                    
                     inputField.value = "";
                     inputField.placeholder = "Escribe una ubicación";
                 })
             .catch(err => console.log(err))
     } else {
         inputField.value = "";
-        inputField.placeholder = "Ha habido un error";
+        inputField.placeholder = "Ha ocurrido un error";
     }
 }
 
